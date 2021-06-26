@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .header {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #logo {
+            width: 100px;
+        }
+
+        .navBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 20px;
+            width: 100%;
+        }
+
+        .form {
+            display: flex;
+            align-items: center;
+            margin: auto;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 20px;
+            width: 100%;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <div class="header">
+        <div>
+            <img id="logo"
+                src="https://static.dezeen.com/uploads/2014/07/Airbnb-rebrand-by-DesignStudio_dezeen_468_8.jpg">
+        </div>
+        <div class="navBar">
+            <a href='/'>Home</a>
+            <a href='/listings'>Listings</a>
+            <a href='/registration'>Sign Up</a>
+            <a href='/login'>Login</a>
+        </div>
+    </div>
+</head>
+
+<body>
+
+    <div class="form">
+        <form action="/action_page.php">
+
+            Where<br>
+            <select id="city" name="city" placeholder="Anywhere">
+                <option value="Toronto">Toronto</option>
+                <option value="Montreal">Montreal</option>
+                <option value="Ottawa">Ottawa</option>
+                <option value="Vancouver">Vancouver</option>
+            </select><br>
+
+            Check-In<br>
+            <input type="text" id="cin" name="cin" placeholder="Thurs, 19th Sep"><br>
+
+            Checkout<br>
+            <input type="text" id="cout" name="cout" placeholder="Sat, 21st Sep"><br>
+
+            Guests<br>
+            <input type="select" id="guest" name="guest" placeholder="1 Guest"><br>
+
+        </form>
+    </div>
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8WGI8EwKkiA" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <a href="/registration">Sign Up</a>
+            <a href="/login">Login</a>
+            <a href="/listings">See Listings</a>
+        </footer>
+    </div>
+    
+
+</body>
+
+</html>

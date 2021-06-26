@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        img {
+            width: 150px;
+            margin: 10px;
+        }
+
+        .form {
+            /*width: 100; */
+            margin: 100px;
+            grid-template-columns: 33% 33% 33%;
+        }
+
+        #logo {
+            width: 100px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .navBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 20px;
+            width: 100%;
+        }
+        
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <div class="header">
+        <div>
+            <img id="logo"
+                src="https://static.dezeen.com/uploads/2014/07/Airbnb-rebrand-by-DesignStudio_dezeen_468_8.jpg">
+        </div>
+        <div class="navBar">
+            <a href='/'>Home</a>
+            <a href='/listings'>Listings</a>
+            <a href='/registration'>Sign Up</a>
+            <a href='/login'>Login</a>
+        </div>
+    </div>
+
+</head>
+
+<body>
+    <div class="form">
+        <form action="/action_page.php">
+            Sign Up<br>
+            Welcome to Airbnb<br>
+            <input type="text" id="email" name="email" placeholder="Email address"><br>
+
+            <input type="text" id="fname" name="fname" placeholder="First name"><br>
+
+            <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+
+            <input type="text" id="password" name="password" placeholder="Create a password"><br>
+
+            <label for="date">Birthday<br> To sign up, you need to be at least 18. Other people who use Airbnb won't
+                see your birthday.</label><br>
+
+            <input type="text" id="month" name="month" placeholder="Month">
+            <input type="text" id="day" name="day" placeholder="Day">
+            <input type="text" id="year" name="year" placeholder="Year"><br>
+
+            We'll send you marketing promotions, special offers, inspiration, and policy updates via email.
+
+            <br>
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+</body>
+
+</html>
