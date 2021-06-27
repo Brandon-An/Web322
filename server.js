@@ -69,6 +69,10 @@ app.post('/checkNulls', function(req, res) {
     {
         res.send('Please Enter Both Fields')
     }
+    else
+    {
+      res.sendFile(path.join(__dirname, '/views/index.html'));
+    }
     
 });
 
