@@ -8,8 +8,12 @@
             flex-direction: row;
         }
 
+        .logoContainer {
+            width: 10%;
+        }
+
         #logo {
-            width: 100px;
+            width: 100%;
         }
 
         .navBar {
@@ -20,10 +24,20 @@
             width: 100%;
         }
 
-        .form {
+        .page {
             display: flex;
-            align-items: center;
-            margin: auto;
+            grid-template-columns: 450px 1fr;
+        }
+
+        .form {
+            display: grid;
+            /* align-items: center; */
+            /* margin: auto; */
+        }
+
+        .video {
+            display: grid;
+            width: 100%;
         }
 
         .footer {
@@ -34,16 +48,42 @@
             width: 100%;
         }
 
+        .video iframe{
+            margin: auto;
+        }
+
+        @media screen and (min-width: 300px) and (max-width: 575px) {
+            .navBar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin: 20px;
+                width: 100%;
+            }
+
+            .logoContainer {
+                width: 5%;
+            }
+
+            .page {
+                flex-direction: column;
+            }
+
+            .video {
+                margin-left: 0px;
+            }
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airbnb</title>
     <div class="header">
-        <div>
+        <div class="logoContainer">
             <img id="logo"
                 src="https://static.dezeen.com/uploads/2014/07/Airbnb-rebrand-by-DesignStudio_dezeen_468_8.jpg">
         </div>
+
         <div class="navBar">
             <a href='/'>Home</a>
             <a href='/listings'>Listings</a>
@@ -54,36 +94,37 @@
 </head>
 
 <body>
+    <div class="page">
+        <div class="form">
+            <form action="/action_page.php">
 
-    <div class="form">
-        <form action="/action_page.php">
+                Where<br>
+                <select id="city" name="city" placeholder="Anywhere">
+                    <option value="Toronto">Toronto</option>
+                    <option value="Montreal">Montreal</option>
+                    <option value="Ottawa">Ottawa</option>
+                    <option value="Vancouver">Vancouver</option>
+                </select><br>
 
-            Where<br>
-            <select id="city" name="city" placeholder="Anywhere">
-                <option value="Toronto">Toronto</option>
-                <option value="Montreal">Montreal</option>
-                <option value="Ottawa">Ottawa</option>
-                <option value="Vancouver">Vancouver</option>
-            </select><br>
+                Check-In<br>
+                <input type="text" id="cin" name="cin" placeholder="Thurs, 19th Sep"><br>
 
-            Check-In<br>
-            <input type="text" id="cin" name="cin" placeholder="Thurs, 19th Sep"><br>
+                Checkout<br>
+                <input type="text" id="cout" name="cout" placeholder="Sat, 21st Sep"><br>
 
-            Checkout<br>
-            <input type="text" id="cout" name="cout" placeholder="Sat, 21st Sep"><br>
+                Guests<br>
+                <input type="select" id="guest" name="guest" placeholder="1 Guest"><br>
 
-            Guests<br>
-            <input type="select" id="guest" name="guest" placeholder="1 Guest"><br>
+            </form>
+        </div>
 
-        </form>
-    </div>
-
-    <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8WGI8EwKkiA" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8WGI8EwKkiA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 
     <div class="footer">
@@ -93,7 +134,7 @@
             <a href="/listings">See Listings</a>
         </footer>
     </div>
-    
+
 
 </body>
 

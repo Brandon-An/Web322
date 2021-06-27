@@ -29,6 +29,7 @@
             justify-content: space-evenly;
             margin: 20px;
             width: 100%;
+            text-decoration: none;
         }
 
     </style>
@@ -54,11 +55,11 @@
 
 <body>
     <div class="form">
-        <form action="/action_page.php">
+        <form action="/checkNulls" method="POST">
 
             Login<br>
             Welcome to Airbnb<br>
-            <input type="text" id="uname" name="uname" placeholder="Username"><br>
+            <input type="text" id="uname" name="uname" placeholder="Username" value="" required><br>
 
             <input type="text" id="pword" name="pword" placeholder="Password"><br>
 
