@@ -20,10 +20,10 @@ app.use(bodyParser.urlencoded({
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'Hotmail',
   auth: {
-    user: 'brandon.bolun.an@gmail.com',
-    pass: '96y28p72'
+    user: 'coder400@hotmail.com',
+    pass: 'C4nada0310!'
   }
 });
 
