@@ -260,7 +260,7 @@ app.post('/dashboard', upload.single('file'), (req, res) => {
     }
   });
 
-  res.send('Hello World')
+  res.redirect("/listings");
 
 });
 
