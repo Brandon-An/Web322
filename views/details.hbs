@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #logo {
+            width: 100px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .navBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 20px;
+            width: 100%;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 20px;
+            width: 100%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+
+    <div class="header">
+        <div>
+            <img id="logo"
+                src="https://static.dezeen.com/uploads/2014/07/Airbnb-rebrand-by-DesignStudio_dezeen_468_8.jpg">
+        </div>
+        <div class="navBar">
+            <a href='/'>Home</a>
+            <a href='/listings'>Listings</a>
+            <a href='/registration'>Sign Up</a>
+            <a href='/login'>Login</a>
+        </div>
+    </div>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="image">
+            <img src="/img/{{{listingAtZero.filename}}}">
+        </div>
+
+        <div class="title">
+            Title: {{listingAtZero.title}}<br>
+        </div>
+        
+        <div class="description">
+            Description: {{listingAtZero.description}}<br>
+        </div>
+        
+        <div class="Price">
+            Price: {{listingAtZero.price}}<br>
+        </div>
+
+        <div class="booking-button">
+            <form action="/booking" method="POST">
+                <input type="text" id="title" name="title" value="{{listingAtZero.title}}" style="display: none;">
+                <input type="text" id="description" name="description" value="{{listingAtZero.description}}" style="display: none;">
+                <input type="text" id="price" name="price" value="{{listingAtZero.price}}" style="display: none;">
+                <input type="submit" value="Book This Room" />
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <footer>
+            <a href='/'>Home</a>
+            <a href="/registration">Sign Up</a>
+            <a href="/login">Login</a>
+            <a href="/listings">See Listings</a>
+        </footer>
+    </div>
+
+</body>
+</html>

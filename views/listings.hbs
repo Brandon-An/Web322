@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <style>
+        .container {
+            margin: 10 10 10 10;
+            width: auto;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+
+        .listing {
+            margin: 10 10 10 10;
+            width: auto;
+            margin: auto;
+        }
+
+        .image {
+            width: auto;
+            margin: auto;
+        }
+
+        img {
+            margin: 0px 0px 20px 0px;
+            width: 300px;
+            height: auto;
+        }
+
+        .desc {
+            width: auto;
+            margin: auto;
+        }
+
         #logo {
             width: 100px;
         }
@@ -10,6 +41,7 @@
             display: flex;
             flex-direction: row;
         }
+
         .navBar {
             display: flex;
             flex-direction: row;
@@ -17,18 +49,21 @@
             margin: 20px;
             width: 100%;
         }
-        .welcome {
+
+        .footer {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 20px;
+            width: 100%;
         }
+
     </style>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Listings</title>
 
     <div class="header">
         <div>
@@ -41,16 +76,25 @@
             <a href='/registration'>Sign Up</a>
             <a href='/login'>Login</a>
         </div>
-
     </div>
+
 </head>
+
 <body>
 
-    <div class="welcome">
-        <h1>
-            Welcome to Airbnb
-        </h1>
+    <div class="container">        
+            {{{rooms}}}
+    </div>
+
+    <div class="footer">
+        <footer>
+            <a href='/'>Home</a>
+            <a href="/registration">Sign Up</a>
+            <a href="/login">Login</a>
+            <a href="/listings">See Listings</a>
+        </footer>
     </div>
 
 </body>
+
 </html>

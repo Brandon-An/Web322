@@ -96,7 +96,7 @@
 <body>
     <div class="page">
         <div class="form">
-            <form action="/action_page.php">
+            <form action="/search" method="POST">
 
                 Where<br>
                 <select id="city" name="city" placeholder="Anywhere">
@@ -107,13 +107,15 @@
                 </select><br>
 
                 Check-In<br>
-                <input type="text" id="cin" name="cin" placeholder="Thurs, 19th Sep"><br>
+                <input type="text" id="check-in" name="check-in" placeholder="Thurs, 19th Sep"><br>
 
                 Checkout<br>
-                <input type="text" id="cout" name="cout" placeholder="Sat, 21st Sep"><br>
+                <input type="text" id="check-out" name="check-out" placeholder="Sat, 21st Sep"><br>
 
                 Guests<br>
                 <input type="select" id="guest" name="guest" placeholder="1 Guest"><br>
+
+                <input type="submit" value="Search">
 
             </form>
         </div>
