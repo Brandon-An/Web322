@@ -26,7 +26,9 @@ function onHttpStart() {
   console.log("Express http server listening on: " + HTTP_PORT);
 }
 
-mongoose.connect('mongodb+srv://ban4:C4nada0310@cluster0.8yeox.mongodb.net/web322_week8?retryWrites=true&w=majority', { useNewUrlParser: true }, { useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://ban4:C4nada0310@cluster0.8yeox.mongodb.net/web322_week8?retryWrites=true&w=majority', { useNewUrlParser: true }, { useUnifiedTopology: true }).
+  catch(error => handleError(error));
+
 
 var userSchema = new Schema({
   "username": String,
